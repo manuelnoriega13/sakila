@@ -1,9 +1,9 @@
 package com.manoriega.sakila.dao;
 
 import com.manoriega.sakila.entities.inventory.Film;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IFilmDao extends CrudRepository<Film, Long> {
+public interface IFilmDao extends JpaRepository<Film, Long> {
 }

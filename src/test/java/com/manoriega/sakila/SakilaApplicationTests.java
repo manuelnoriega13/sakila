@@ -2,7 +2,6 @@ package com.manoriega.sakila;
 
 import com.manoriega.sakila.dao.IActorDao;
 import com.manoriega.sakila.dao.IFilmDao;
-import com.manoriega.sakila.entities.inventory.Actor;
 import com.manoriega.sakila.entities.inventory.Film;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,8 +24,7 @@ public class SakilaApplicationTests {
     @Test
     public void contextLoads() {
 
-        List<Actor> actorList = (List<Actor>) actorDao.findAll();
-        List<Film> filmList = (List<Film>) filmDao.findAll();
+        List<Film> filmList = filmDao.findAll();
     }
 
 }

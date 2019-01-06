@@ -1,30 +1,21 @@
 package com.manoriega.sakila.entities.inventory;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "film_actor")
-@AssociationOverrides({
-        @AssociationOverride(name = "actor",
-                joinColumns = @JoinColumn(name = "actor_id")),
-        @AssociationOverride(name = "film",
-                joinColumns = @JoinColumn(name = "film_id")
-        )
-})
-public class FilmActor {
+public class FilmActor implements Serializable {
 
-    @EmbeddedId
-    private FilmActorId filmActorId;
-
-    @ManyToOne(fetch = FetchType.EAGER)
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "actor_id")
     private Actor actor;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "film_id")
     private Film film;
 
     @Column(name = "last_update")
