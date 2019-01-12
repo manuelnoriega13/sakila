@@ -1,8 +1,7 @@
 package com.manoriega.sakila;
 
-import com.manoriega.sakila.dao.IActorDao;
-import com.manoriega.sakila.dao.IFilmDao;
-import com.manoriega.sakila.entities.inventory.Film;
+import com.manoriega.sakila.dao.*;
+import com.manoriega.sakila.entities.inventory.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +20,28 @@ public class SakilaApplicationTests {
     @Autowired
     private IFilmDao filmDao;
 
+    @Autowired
+    private ILanguageDao languageDao;
+
+    @Autowired
+    private ICategoryDao categoryDao;
+
+    @Autowired
+    private IFilmTextDao filmTextDao;
+
+    @Autowired
+    private IIventoryDao iIventoryDao;
+
     @Test
     public void contextLoads() {
 
-        List<Film> filmList = filmDao.findAll();
+//        List<Inventory> inventories = iIventoryDao.findAll();
+//        List<FilmText> filmTextList = filmTextDao.findAll();
+//        List<Category> categoryList = categoryDao.findAll();
+//        List<Language> languagList = languageDao.findAll();
+//        List<Actor> actorList = actorDao.findAll();
+//        List<Film> filmList = filmDao.findAll();
+//        List<FilmCategory> filmCategories = iFilmCategory.findAll();
     }
 
 }
