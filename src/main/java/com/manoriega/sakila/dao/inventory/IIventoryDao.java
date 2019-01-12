@@ -1,4 +1,4 @@
-package com.manoriega.sakila.dao;
+package com.manoriega.sakila.dao.inventory;
 
 import com.manoriega.sakila.entities.inventory.Inventory;
 import org.springframework.data.jpa.repository.JpaRepository;

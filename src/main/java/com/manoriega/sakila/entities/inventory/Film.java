@@ -72,6 +72,9 @@ public class Film {
     @OneToMany(mappedBy = "film", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<FilmCategory> filmCategories;
 
+    @OneToMany(mappedBy = "film", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Inventory> inventories;
+
     public Set<String> specialFeatures() {
         return (null == specialFeatures) ? Collections.emptySet() :
                 Arrays.stream(specialFeatures.split("_")).map(String::valueOf).collect(Collectors.toSet());
