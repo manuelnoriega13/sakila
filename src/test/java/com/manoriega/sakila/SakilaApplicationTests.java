@@ -5,6 +5,7 @@ import com.manoriega.sakila.entities.inventory.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -32,6 +33,9 @@ public class SakilaApplicationTests {
     @Autowired
     private IIventoryDao iIventoryDao;
 
+    @Value("${foo}")
+    private String foo;
+
     @Test
     public void contextLoads() {
 
@@ -40,8 +44,9 @@ public class SakilaApplicationTests {
 //        List<Category> categoryList = categoryDao.findAll();
 //        List<Language> languagList = languageDao.findAll();
 //        List<Actor> actorList = actorDao.findAll();
-        List<Film> filmList = filmDao.findAll();
+//        List<Film> filmList = filmDao.findAll();
 //        List<FilmCategory> filmCategories = iFilmCategory.findAll();
+       String a = foo;
     }
 
 }
